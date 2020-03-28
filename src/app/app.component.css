@@ -1,0 +1,26 @@
+.btn-primary-orange {
+    color: black;
+    background-color: orange;
+    border-color: orange;
+}
+
+.btn-primary-blue {
+    color: black;
+    background-color: lightblue;
+    border-color: lightblue;
+}
+
+.btn-primary-green {
+    color: black;
+    background-color: lightgreen;
+    border-color: lightgreen;
+}
+
+.img-logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.titleButton {    padding: 13px 0;
+}
