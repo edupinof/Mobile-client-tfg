@@ -17,11 +17,21 @@ export class AppComponent {
       console.log(snap.val());
     });
   }
-  selectColor(color){
+  // selectColor(color){
+  //   const usersRef = firebase.database().ref('/');
+    
+  //   usersRef.child('configuracion').set({
+  //    'background-body': color
+  //   });
+  // }
+
+  selectBgImage(){
+    let url = (<HTMLInputElement>document.getElementById("imgUrl")).value;
+    
     const usersRef = firebase.database().ref('/');
     
-    usersRef.child('configuracion').set({
-     'background-body': color
+    usersRef.child('background-image').set({
+     'url': url
     });
   }
 
@@ -50,6 +60,25 @@ export class AppComponent {
      'block': num
     });
   }
+  locateSanto(num) {
+    const usersRef = firebase.database().ref('/');
+    usersRef.child('santo').set({
+     'block': num
+    });
+  }
+  locateAffirmation(num) {
+    const usersRef = firebase.database().ref('/');
+    usersRef.child('motivation').set({
+     'block': num
+    });
+  }
+
+  locateTwitter(num) {
+    const usersRef = firebase.database().ref('/');
+    usersRef.child('twitter').set({
+     'block': num
+    });
+  }
 
   cambiarcolor() {
     let color = (<HTMLInputElement>document.getElementById("colorPicker")).value;
@@ -61,6 +90,15 @@ console.log(color);
     });  
   }
 
+  cambiarcolorFuente(){
+    let color = (<HTMLInputElement>document.getElementById("colorFontPicker")).value;
+    const usersRef = firebase.database().ref('/');
+console.log(color);
+
+    usersRef.child('color-font').set({
+     'color': color
+    });  
+  }
     onSearchChange(searchValue: string): void {  
       if (searchValue[0] === '(') {
         const usersRef = firebase.database().ref('/');
