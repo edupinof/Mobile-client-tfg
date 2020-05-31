@@ -28,12 +28,46 @@
         data-parent="#accordion"
       >
         <div class="card-body">
-          <p class="card-text">Cambiará de color el fondo de pantalla</p>
-          <div class="row justify-content-center">
-            
-            <input id="colorPicker" type="color" (change)="cambiarcolor()" />
+          <p class="card-text">Cambiará el fondo de pantalla</p>
+            <div class="row m-0 mb-2"> Selecciona un color de fondo   <input id="colorPicker" type="color" (change)="cambiarcolor()" />
+            </div>
+            <div class="row m-0"> Selecciona una imagen de fondo
+            <input id="imgUrl" type="text" /><button (click)="selectBgImage()">Select image</button></div>
           </div>
-        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingSix">
+        <h5 class="mb-0">
+          <button
+            class="btn btn-link collapsed w-100"
+            data-toggle="collapse"
+            data-target="#collapseSix"
+            aria-expanded="false"
+            aria-controls="collapseSix"
+          >
+          <div class="row">
+            <div class="col-3 p-0 text-left">
+              <img class="img-logo" src="./../assets/letras.jpg" alt="Card image cap">
+            </div>
+            <div class="col-9 p-0 text-left">          <h5 class="titleButton m-0">Color para la fuente</h5>
+            </div> 
+          </div>
+          </button>
+        </h5>
+      </div>
+
+      <div
+        id="collapseSix"
+        class="collapse"
+        aria-labelledby="headingSix"
+        data-parent="#accordion"
+      >
+        <div class="card-body">
+          <p class="card-text">Cambiará el color de la fuente</p>
+            <div class="row m-0 mb-2"> Selecciona un color de fuente   <input id="colorFontPicker" type="color" (change)="cambiarcolorFuente()" />
+            </div>
+          </div>
       </div>
     </div>
     <div class="card">
@@ -353,6 +387,221 @@
           </div>
           <div class="row justify-content-center">
             <button class="btn btn-danger mt-2" (click)="locateNews(0)">
+              Quitar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingSeven">
+        <h5 class="mb-0">
+          <button
+            class="btn btn-link collapsed w-100"
+            data-toggle="collapse"
+            data-target="#collapseSeven"
+            aria-expanded="false"
+            aria-controls="collapseSeven"
+          >
+          <div class="row">
+            <div class="col-3 p-0 text-left">
+              <img class="img-logo" src="./../assets/santo.jpg" alt="Card image cap">
+            </div>
+            <div class="col-9 p-0 text-left">         
+               <h5 class="titleButton m-0">Santo del día</h5>
+            </div> 
+          </div>           
+         </button>
+        </h5>
+      </div>
+      <div
+        id="collapseSeven"
+        class="collapse"
+        aria-labelledby="headingSeven"
+        data-parent="#accordion"
+      >
+        <div class="card-body">
+          <h5 class="card-title">Santo del día</h5>
+          <p class="card-text">Posicionará el santo del día donde lo desees</p>
+          <div class="row justify-content-center">
+            <button class="btn btn-primary mx-1" (click)="locateSanto(1)">
+              top-left
+            </button>
+            <button class="btn btn-primary mx-1" (click)="locateSanto(2)">
+              top-mid
+            </button>
+            <button class="btn btn-primary mx-1" (click)="locateSanto(3)">
+              top-rig
+            </button>
+          </div>
+          <div class="row justify-content-center my-2">
+            <button class="btn btn-primary mx-1" (click)="locateSanto(4)">
+              mid-left
+            </button>
+            <button class="btn btn-primary mx-1" (click)="locateSanto(5)">
+              mid-mid
+            </button>
+            <button class="btn btn-primary mx-1" (click)="locateSanto(6)">
+              mid-rig
+            </button>
+          </div>
+          <div class="row justify-content-center">
+            <button class="btn btn-primary mx-1" (click)="locateSanto(7)">
+              bot-left
+            </button>
+            <button class="btn btn-primary mx-1" (click)="locateSanto(8)">
+              bot-mid
+            </button>
+            <button class="btn btn-primary mx-1" (click)="locateSanto(9)">
+              bot-rig
+            </button>
+          </div>
+          <div class="row justify-content-center">
+            <button class="btn btn-danger mt-2" (click)="locateSanto(0)">
+              Quitar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="headingEight">
+        <h5 class="mb-0">
+          <button
+            class="btn btn-link collapsed w-100"
+            data-toggle="collapse"
+            data-target="#collapseEight"
+            aria-expanded="false"
+            aria-controls="collapseEight"
+          >
+          <div class="row">
+            <div class="col-3 p-0 text-left">
+              <img class="img-logo" src="./../assets/empower.png" alt="Card image cap">
+            </div>
+            <div class="col-9 p-0 text-left">         
+               <h5 class="titleButton m-0">Frase motivacional</h5>
+            </div> 
+          </div>           
+         </button>
+        </h5>
+      </div>
+      <div
+        id="collapseEight"
+        class="collapse"
+        aria-labelledby="headingEight"
+        data-parent="#accordion"
+      >
+        <div class="card-body">
+          <h5 class="card-title">Frase motivacional</h5>
+          <p class="card-text">Posicionará la frase motivacional donde lo desees</p>
+          <div class="row justify-content-center">
+            <button class="btn btn-primary mx-1" (click)="locateAffirmation(1)">
+              top-left
+            </button>
+            <button class="btn btn-primary mx-1" (click)="locateAffirmation(2)">
+              top-mid
+            </button>
+            <button class="btn btn-primary mx-1" (click)="locateAffirmation(3)">
+              top-rig
+            </button>
+          </div>
+          <div class="row justify-content-center my-2">
+            <button class="btn btn-primary mx-1" (click)="locateAffirmation(4)">
+              mid-left
+            </button>
+            <button class="btn btn-primary mx-1" (click)="locateAffirmation(5)">
+              mid-mid
+            </button>
+            <button class="btn btn-primary mx-1" (click)="locateAffirmation(6)">
+              mid-rig
+            </button>
+          </div>
+          <div class="row justify-content-center">
+            <button class="btn btn-primary mx-1" (click)="locateAffirmation(7)">
+              bot-left
+            </button>
+            <button class="btn btn-primary mx-1" (click)="locateAffirmation(8)">
+              bot-mid
+            </button>
+            <button class="btn btn-primary mx-1" (click)="locateAffirmation(9)">
+              bot-rig
+            </button>
+          </div>
+          <div class="row justify-content-center">
+            <button class="btn btn-danger mt-2" (click)="locateAffirmation(0)">
+              Quitar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="headingNine">
+        <h5 class="mb-0">
+          <button
+            class="btn btn-link collapsed w-100"
+            data-toggle="collapse"
+            data-target="#collapseNine"
+            aria-expanded="false"
+            aria-controls="collapseNine"
+          >
+          <div class="row">
+            <div class="col-3 p-0 text-left">
+              <img class="img-logo" src="./../assets/twitter.png" alt="Card image cap">
+            </div>
+            <div class="col-9 p-0 text-left">         
+               <h5 class="titleButton m-0">Twitter</h5>
+            </div> 
+          </div>           
+         </button>
+        </h5>
+      </div>
+      <div
+        id="collapseNine"
+        class="collapse"
+        aria-labelledby="headingNine"
+        data-parent="#accordion"
+      >
+        <div class="card-body">
+          <h5 class="card-title">Twitter</h5>
+          <p class="card-text">Posicionará twitter donde lo desees</p>
+          <div class="row justify-content-center">
+            <button class="btn btn-primary mx-1" (click)="locateTwitter(1)">
+              top-left
+            </button>
+            <button class="btn btn-primary mx-1" (click)="locateTwitter(2)">
+              top-mid
+            </button>
+            <button class="btn btn-primary mx-1" (click)="locateTwitter(3)">
+              top-rig
+            </button>
+          </div>
+          <div class="row justify-content-center my-2">
+            <button class="btn btn-primary mx-1" (click)="locateTwitter(4)">
+              mid-left
+            </button>
+            <button class="btn btn-primary mx-1" (click)="locateTwitter(5)">
+              mid-mid
+            </button>
+            <button class="btn btn-primary mx-1" (click)="locateTwitter(6)">
+              mid-rig
+            </button>
+          </div>
+          <div class="row justify-content-center">
+            <button class="btn btn-primary mx-1" (click)="locateTwitter(7)">
+              bot-left
+            </button>
+            <button class="btn btn-primary mx-1" (click)="locateTwitter(8)">
+              bot-mid
+            </button>
+            <button class="btn btn-primary mx-1" (click)="locateTwitter(9)">
+              bot-rig
+            </button>
+          </div>
+          <div class="row justify-content-center">
+            <button class="btn btn-danger mt-2" (click)="locateTwitter(0)">
               Quitar
             </button>
           </div>
