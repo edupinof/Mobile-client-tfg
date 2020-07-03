@@ -202,14 +202,12 @@
           
           <form>
             <input list="browsers" name="browser" (input)="onSearchChange($event.target.value)"  autocomplete="off">
-            <datalist id="browsers" > 
-              <option *ngFor="let item of stocksValue" value="({{item.symbol}}) - {{item.name}}">
-             
-            </datalist>
+          
             <!-- <button class="btn btn-primary mx-1" (click)="setStock()">
              Selecciona
             </button> -->
           </form>
+          <br>
           <div class="row justify-content-center">
             <button class="btn btn-primary mx-1" (click)="locateStocks(1)">
               top-left
@@ -567,6 +565,14 @@
         <div class="card-body">
           <h5 class="card-title">Twitter</h5>
           <p class="card-text">Posicionará twitter donde lo desees</p>
+          <form>
+            <input list="twitter" name="twitter" (input)="onSearchChangeTW($event.target.value)"  autocomplete="off">
+          
+            <!-- <button class="btn btn-primary mx-1" (click)="setStock()">
+             Selecciona
+            </button> -->
+          </form>
+          <br>
           <div class="row justify-content-center">
             <button class="btn btn-primary mx-1" (click)="locateTwitter(1)">
               top-left
@@ -609,24 +615,5 @@
       </div>
     </div>
   </div>
-  <!-- <div class="card w-100">
 
-        <img class="w-25 " src="./../assets/color.png" alt="Card image cap">
-        
-    </div>
- 
-    <div class="card w-100">
-        <img class="card-img-top " src="./../assets/digital-clock.jpg" alt="Card image cap">
-     
-    </div>
-
-    <div class="card w-100">
-        <img class="card-img-top " src="./../assets/stock.png" alt="Card image cap">
-        
-    </div>
-
-    <div class="card w-100">
-        <img class="card-img-top " src="./../assets/tiempo.png" alt="Card image cap">
-        
-    </div> -->
 </div>

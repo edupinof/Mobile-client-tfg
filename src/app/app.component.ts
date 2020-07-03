@@ -100,23 +100,22 @@ console.log(color);
     });  
   }
     onSearchChange(searchValue: string): void {  
-      if (searchValue[0] === '(') {
+      if (searchValue) {
         const usersRef = firebase.database().ref('/');
       usersRef.child('stocksName').set({
        'name': searchValue
       });
-      } else {
-      this.stocksValue = [];
-      this.apiService.getStockList(searchValue).subscribe((ans) => {
-      let data = JSON.parse(JSON.stringify(ans));
-        data.data.forEach(element => {
-          console.log(element);
-          this.stocksValue.push(element);
-        });
-      }); 
-    }
-    }
+      } 
 
+    }
+    onSearchChangeTW(searchValue: string): void {
+      if (searchValue) {
+        const usersRef = firebase.database().ref('/');
+      usersRef.child('TwitterName').set({
+       'name': searchValue
+      });
+      } 
+    }
     setStock(){
       console.log("seleccionado");
       
